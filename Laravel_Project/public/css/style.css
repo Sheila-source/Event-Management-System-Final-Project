@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.del:hover, .close:hover{
+  opacity: 0.75;
+}
+.del{
+  box-shadow: 1.5px 2px #888888;
+}
+
+.plus{
+  border: 1px solid grey;
+}
+
+.view, .edit, .back{
+  box-shadow: 2px 2px #888888;
+}
+
+
+.create, .update, .cancel{
+  box-shadow: 2px 2.5px #888888;
+}
+
+@media screen and (max-width:1200px) {
+  .column{
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive columns */
+@media screen and (max-width: 780px) {
+  .column{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column{
+    width: 80%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 5px 5px #888888;
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+.modal{
+  margin-top: 17.5%;
+}
